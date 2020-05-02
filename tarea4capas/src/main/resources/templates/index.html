@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>Ingrese los datos del producto:</p><br/>
+	<form method="post" th:action="@{/ingresado}" th:object="${producto}">
+		<div><label>Codigo de Producto Universal</label>
+			<input th:field="*{codigo}" type="text" placeholder="Ingrese Codigo" style="width: 400px" name="codigo" />
+			<span th:errors="*{codigo}" style="color: #FF0000"></span>
+		</div>
+        <div><label>Nombre Producto</label>
+        	<input th:field="*{nombre}" type="text" placeholder="Ingrese Nombre" style="width: 400px" name="nombre"/>
+        	<span th:errors="*{nombre}" style="color: #FF0000"></span>
+        </div>
+        <div><label>Marca</label>
+        	<input th:field="*{marca}" type="text" placeholder="Ingrese Marca" style="width: 400px" name="marca"/>
+        	<span th:errors="*{marca}" style="color: #FF0000"></span>
+        </div>
+        <div><label>Descripcion</label>
+        	<input th:field="*{descripcion}" type="text" placeholder="Ingrese Descripcion" style="width: 400px; heigth: 400px" name="descripcion"/>
+        	<span th:errors="*{descripcion}" style="color: #FF0000"></span>
+        </div>
+        <div><label>Existencias</label>
+        	<input th:field="*{existencias}" type="text" placeholder="Ingrese Existencias" style="width: 400px" name="existencias"/>
+        	<span th:errors="*{existencias}" style="color: #FF0000"></span>
+        </div>
+        <div><label>Fecha de Ingreso</label>
+        	<input th:field="*{fechaIngreso}" type="text" placeholder="Ingrese Fecha Ingreso" style="width: 400px" name="fechaIngreso"/>
+        	<span th:errors="*{fechaIngreso}" style="color: #FF0000"></span>
+        </div>
+        <div><input type="submit" value="Guardar Producto"></a></div>
+    </form>
+
+</body>
+</html>
