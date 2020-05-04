@@ -17,7 +17,7 @@ public class Producto {
 	@Size(min=1, max=500, message="El campo usuario debe tener una longitud entre 1 y 500 caracteres.")
 	String descripcion;
 	@Digits(fraction = 0, message="Solo  numeros enteros", integer = 40)
-	Integer existencias;
+	String existencias;
 	@Pattern(regexp = "^([0-2][0-9]|(3)[0-1])(\\/)(((0)[0-9])|((1)[0-2]))(\\/)\\d{4}$", message ="Fecha erronea. El formato es dd/mm/yyyy")
 	String fechaIngreso;
 
@@ -45,10 +45,10 @@ public class Producto {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-	public Integer getExistencias() {
+	public String getExistencias() {
 		return existencias;
 	}
-	public void setExistencias(Integer existencias) {
+	public void setExistencias(String existencias) {
 		this.existencias = existencias;
 	}
 	public String getFechaIngreso() {
